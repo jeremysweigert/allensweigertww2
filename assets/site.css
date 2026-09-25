@@ -1099,6 +1099,19 @@ figure.chartplate .plate { background: transparent; }
 figure.chartplate figcaption { margin-top: 12px; }
 .chartplate svg { max-height: none; }
 
+/* A plate is drawn 840 units wide. Squeezed into a phone it renders its labels
+   at five or six pixels: a picture of a timeline rather than a timeline you can
+   read. Below tablet width the drawing keeps a legible size and the figure
+   scrolls instead, which is the same bargain .table-wrap already makes for a
+   wide table. Scoped to screen so the paged edition is untouched. */
+@media screen and (max-width: 860px) {
+  figure.chartplate { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  figure.chartplate > .plate { min-width: 760px; }
+  /* the caption and the key describe the drawing, so they stay put while it pans */
+  figure.chartplate figcaption,
+  figure.chartplate details.chart-key { position: sticky; left: 0; max-width: calc(100vw - 48px); }
+}
+
 /* the drawing, set out in words, always in the DOM */
 details.chart-key {
   margin: 10px 0 0; padding: 10px 14px; border: 1px solid var(--frame-rule);
