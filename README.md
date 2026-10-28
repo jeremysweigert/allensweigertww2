@@ -15,7 +15,7 @@ are printed. Where nothing settles a question, it says so.
 
 **Read it:** <https://jeremysweigert.github.io/allensweigertww2/>
 
-The whole thing is also here as a single PDF, 514 pages.
+The whole thing is also here as a single PDF, 518 pages.
 
 ---
 
